@@ -1,0 +1,239 @@
+/* Ajustes generales */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: auto; /* Ajusta según el contenido */
+    padding: 1.25rem; /* 20px */
+    box-sizing: border-box;
+    max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+}
+
+/* Sección derecha */
+.right-section {
+    width: 25rem; /* 400px */
+    height: auto; /* Ajusta según el contenido */
+    background-color: #ffffff;
+    border-radius: 1.5rem; /* 24px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.25rem; /* 20px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.right-section img {
+    width: 9.375rem; /* 150px */
+    height: auto;
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.right-section p {
+    color: #1a202c;
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.right-section span {
+    color: #4a5568;
+}
+
+/* Sección izquierda */
+.left-section {
+    flex: 2;
+    background-color: #edf2f7;
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.625rem; /* 10px */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 2rem; /* 32px */
+    color: #3a4a6b; /* Dark Blue 300 */
+    width: 100%;
+    height: 9.375rem; /* 150px */
+    padding: 0.625rem; /* 10px */
+    border-radius: 0.5rem; /* 8px */
+    border: 0.0625rem solid #cbd5e0; /* 1px */
+    resize: none;
+}
+
+/* Opciones */
+.options {
+    display: flex;
+    align-items: center;
+    color: #718096; /* Gray 400 */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem; /* 12px */
+    margin-top: 1.25rem; /* 20px */
+}
+
+.icon {
+    margin-right: 0.5rem; /* 8px */
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem; /* 24px */
+    margin-top: 1.25rem; /* 20px */
+}
+
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 1rem; /* 16px */
+    border-radius: 1.5rem; /* 24px */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    cursor: pointer;
+    text-align: center;
+    border: 0.125rem solid transparent; /* 2px */
+    height: 4.1875rem; /* 67px */
+    width: 20.5rem; /* 328px */
+}
+
+/* Estilos específicos para el botón "Encriptar" */
+.encrypt {
+    background-color: #3a4a6b; /* Dark Blue 300 */
+    color: white;
+}
+
+/* Estilos específicos para el botón "Desencriptar" */
+.decrypt {
+    background-color: white;
+    color: #3a4a6b; /* Dark Blue 300 */
+    border-color: #3a4a6b; /* Borde Dark Blue 300 */
+}
+
+/* Estilos específicos para el botón "Copiar" */
+#copyButton {
+    background-color: white;
+    color: #3a4a6b; /* Dark Blue 300 */
+    border-color: #3a4a6b; /* Borde Dark Blue 300 */
+}
+
+/* Estilos para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+#resultSection {
+    margin-top: 1.25rem; /* 20px */
+}
+
+/* Ajustes para pantallas con un ancho máximo de 768px (tablets) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a modo vertical para pantallas más pequeñas */
+        height: auto; /* Ajusta la altura al contenido */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Asegura que las secciones ocupen todo el ancho del contenedor */
+        margin: 0;
+    }
+
+    .right-section {
+        margin-top: 1.25rem; /* Agrega margen superior para separación */
+    }
+
+    textarea {
+        font-size: 1.5rem; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+        height: 7.5rem; /* Ajusta la altura del área de texto */
+    }
+
+    .buttons {
+        flex-direction: column; /* Coloca los botones en una columna */
+        gap: 0.75rem; /* Espacio entre los botones */
+    }
+
+    .btn {
+        width: 100%; /* Asegura que los botones ocupen el ancho completo del contenedor */
+    }
+
+    .options {
+        margin-top: 0.9375rem; /* Ajusta el margen superior para pantallas más pequeñas */
+    }
+
+    #resultSection {
+        margin-top: 0.9375rem; /* Ajusta el margen superior para pantallas más pequeñas */
+    }
+}
+
+/* Ajustes para pantallas con un ancho máximo de 375px (teléfonos) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0.625rem; /* 10px */
+    }
+
+    textarea {
+        font-size: 1.125rem; /* Ajusta el tamaño de la fuente aún más */
+        height: 6.25rem; /* Ajusta la altura del área de texto */
+    }
+
+    .btn {
+        font-size: 0.875rem; /* Reduce el tamaño de la fuente de los botones */
+    }
+
+    .buttons {
+        flex-direction: column; /* Coloca los botones en una columna en teléfonos */
+        gap: 0.5rem; /* Reduce el espacio entre los botones */
+    }
+}
+
+/* Ajustes para pantallas con un ancho máximo de 768px y altura máxima de 1174px (tablets) */
+@media (max-width: 768px) and (max-height: 1174px) {
+    .container {
+        flex-direction: column; /* Cambia a una columna para tablets */
+        height: auto; /* Permite que la altura se ajuste según el contenido */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Asegura que las secciones ocupen todo el ancho del contenedor */
+        margin: 0;
+    }
+
+    .right-section {
+        margin-top: 1.25rem; /* Añade margen superior para separación */
+    }
+
+    .buttons {
+        flex-direction: row; /* Coloca los botones en una fila en lugar de columna */
+        justify-content: space-between; /* Espacia los botones */
+        gap: 0.75rem; /* Espacio entre los botones */
+        margin-top: 1.25rem; /* Ajusta el margen superior para los botones */
+    }
+
+    .btn {
+        width: 48%; /* Ajusta el ancho de los botones para que quepan en una fila */
+        height: 4.1875rem; /* Asegura que la altura de los botones sea consistente */
+    }
+
+    .options {
+        margin-top: 0.9375rem; /* Ajusta el margen superior para pantallas más pequeñas */
+    }
+
+    #resultSection {
+        margin-top: 1.25rem; /* Ajusta el margen superior para la sección de resultados */
+    }
+}
